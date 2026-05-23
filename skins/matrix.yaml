@@ -1,0 +1,126 @@
+# Premium Matrix-inspired terminal skin with TUI-compatible boot text.
+name: matrix
+description: "HERMATRIX — premium Matrix-inspired terminal skin with cinematic green rain, operator boot text, and deep black cyberpunk aesthetics"
+
+colors:
+  banner_border: "#003B12"
+  banner_title: "#00FF41"
+  banner_accent: "#39FF7A"
+  banner_dim: "#007A24"
+  banner_text: "#D8FFE3"
+  ui_accent: "#00FF41"
+  ui_label: "#20C95A"
+  ui_ok: "#00FF41"
+  ui_error: "#7CFF9B"
+  ui_warn: "#A6FFC0"
+  prompt: "#D8FFE3"
+  input_rule: "#005A1B"
+  response_border: "#00B837"
+  status_bar_bg: "#001407"
+  status_bar_text: "#9CFFB5"
+  status_bar_strong: "#00FF41"
+  status_bar_dim: "#00651E"
+  status_bar_good: "#00FF41"
+  status_bar_warn: "#A6FFC0"
+  status_bar_bad: "#39FF7A"
+  status_bar_critical: "#D8FFE3"
+  voice_status_bg: "#001A08"
+  completion_menu_bg: "#000E05"
+  completion_menu_current_bg: "#003F14"
+  completion_menu_meta_bg: "#001A08"
+  completion_menu_meta_current_bg: "#005A1B"
+  session_label: "#00FF41"
+  session_border: "#004D17"
+
+spinner:
+  waiting_faces:
+    - "0"
+    - "1"
+    - "01"
+    - "10"
+    - "▓"
+    - "▒"
+    - "░"
+  thinking_faces:
+    - "⠁"
+    - "⠃"
+    - "⠇"
+    - "⠿"
+    - "⣿"
+    - "▓"
+    - "▒"
+  thinking_verbs:
+    - "following the white rabbit"
+    - "initializing digital rain"
+    - "scanning the construct"
+    - "decrypting green code"
+    - "opening operator link"
+    - "reading the source"
+    - "bending the rules"
+    - "freeing the mind"
+  wings:
+    - ["▓", "▓"]
+    - ["⟨0", "1⟩"]
+    - ["⟨1", "0⟩"]
+    - ["⠿", "⠿"]
+
+branding:
+  agent_name: "HERMATRIX"
+  welcome: ""
+  goodbye: "[#00FF41]Connection closed.[/] [#39FF7A]Free your mind.[/]"
+  response_label: " ⣿ OPERATOR "
+  prompt_symbol: "ﾎ> "
+  help_header: "⣿ Matrix Protocols"
+
+tool_prefix: "▌"
+
+tool_emojis:
+  terminal: "▓"
+  web_search: "01"
+  read_file: "░"
+  write_file: "▒"
+  search_files: "10"
+  execute_code: "λ"
+  browser_navigate: "⠿"
+  delegate_task: "⣿"
+  mixture_of_agents: "∴"
+  memory: "◌"
+  clarify: "?"
+  cronjob: "↻"
+  process: "⚙"
+  todo: "☑"
+
+banner_logo: |
+  [#001806]  0 1 0 1  ░▒▓█▓▒░   THE SOURCE IS ONLINE   ░▒▓█▓▒░  1 0 1 0[/]
+  [#003B12]  ────────────────────────────────────────────────────────────────────────────[/]
+  [#005A1B]ﾊ                              Wake up, Operator...                             1[/]
+  [#007A24]ﾒ                            The Matrix has you...                            ｶ[/]
+  [#00992E]0                           Follow the white rabbit.                          ﾄ[/]
+  [#00B837]ｷ                       Operator link established :: 01                       7[/]
+  [#00B837]     ██╗  ██╗███████╗██████╗ ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗[/]
+  [#00FF41]     ██║  ██║██╔════╝██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝[/]
+  [#39FF7A]     ███████║█████╗  ██████╔╝██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ [/]
+  [#7CFF9B]     ██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ [/]
+  [#D8FFE3]     ██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗[/]
+  [bold #00FF41]     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝[/]
+  [#003B12]  ────────────────────────────────────────────────────────────────────────────[/]
+  [dim #00651E]ﾎ                                Knock, knock.                                1[/]
+
+banner_hero: |
+  [#001806]  ﾊ     0     ﾐ     ｻ     1     ﾛ[/]
+  [#00290D]  ﾒ     1     ｳ     ﾖ     0     ｶ[/]
+  [#003B12]  0     ﾂ     ﾗ     ﾅ     ﾎ     9[/]
+  [#005A1B]  ｷ     8     ｵ     ﾇ     7     ﾚ[/]
+  [#007A24]  1     ｴ     ﾀ     4     ﾔ     ﾏ[/]
+  [#00992E]  ﾁ     0     ﾆ     ﾘ     2     ｿ[/]
+  [#00B837]  7     ﾛ     6     ﾄ     1     ﾕ[/]
+  [#00FF41]  ﾎ     1     ﾒ     0     ｱ     5[/]
+  [bold #D8FFE3]     H E R M E S   M A T R I X   [/]
+  [#00FF41]  ｼ     0     ｶ     ﾘ     1     ﾎ[/]
+  [#00B837]  ﾗ     3     ﾑ     0     ﾀ     4[/]
+  [#00992E]  0     ﾊ     9     ﾒ     ﾆ     6[/]
+  [#007A24]  ｻ     1     ｸ     ﾚ     8     ｵ[/]
+  [#005A1B]  5     ﾄ     ﾔ     ﾌ     7     ﾈ[/]
+  [#003B12]  ﾎ     0     ﾕ     ﾛ     ﾏ     1[/]
+  [#00290D]  ﾘ           ﾀ     6     ｿ     ﾒ[/]
+  [dim #00651E]       vertical rain :: operator link[/]
