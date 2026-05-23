@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="https://raw.githubusercontent.com/lipebez/hermes-skins/main"
+REPO="https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main"
 TARGET_DIR="$HOME/.hermes/skins"
 TARGET_FILE="$TARGET_DIR/matrix.yaml"
 

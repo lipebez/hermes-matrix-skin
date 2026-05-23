@@ -9,7 +9,7 @@ Premium Matrix-inspired skin for Hermes Agent — deep black cyberpunk aesthetic
 Run:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-skins/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/install.sh | bash
 ```
 
 Then open Hermes and use:
@@ -22,7 +22,7 @@ Then open Hermes and use:
 
 ```bash
 mkdir -p ~/.hermes/skins
-curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-skins/main/skins/matrix.yaml \
+curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/skins/matrix.yaml \
   -o ~/.hermes/skins/matrix.yaml
 ```
 
