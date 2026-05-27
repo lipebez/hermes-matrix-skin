@@ -18,6 +18,22 @@ Then open Hermes and use:
 /skin matrix
 ```
 
+## Personalize
+
+Replace **"Operator"** with your name or nickname:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.sh | bash
+```
+
+Or pass your name directly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.sh | bash -s "Neo"
+```
+
+This updates the banner greeting (`Wake up, Neo...`) and the response label (`⣿ NEO`). A backup of the original file is created automatically.
+
 ## Manual install
 
 ```bash
@@ -38,6 +54,7 @@ Then use:
 skins/matrix.yaml          # HERMATRIX theme
 screenshots/matrix.png     # Preview image
 install.sh                 # One-command installer
+customize.sh               # Replace "Operator" with your name
 ```
 
 ## Notes
