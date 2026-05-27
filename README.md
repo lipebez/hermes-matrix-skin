@@ -7,7 +7,7 @@ Premium Matrix-inspired skin for Hermes Agent — deep black cyberpunk aesthetic
 ## Features
 
 - **Cinematic banner** — ASCII art HERMATRIX with iconic Matrix dialogue (`Wake up, Operator...`)
-- **Digital rain hero** — vertical katakana/number rain as background
+- **Digital rain hero** — vertical katakana/number rain (`ﾊ ﾒ 0 ﾄ ｶ ﾂ ﾗ ﾅ`) with decorative accents throughout the banner
 - **Binary spinner** — animated faces: `0`, `1`, `01`, `10`, `▓`, `▒`, `░`
 - **14 thinking verbs** — random Matrix-themed messages while the agent thinks:
   `following the white rabbit` · `dodging bullets` · `consulting the oracle` · `jacking in` · `choosing the red pill` · `defying gravity` · `seeing through the code` · and more
