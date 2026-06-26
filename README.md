@@ -4,6 +4,13 @@ Premium Matrix-inspired skin for Hermes Agent — deep black cyberpunk aesthetic
 
 ![HERMATRIX preview](screenshots/matrix.png)
 
+## Current version
+
+**v1.0.0** — first formal versioned release, with native Windows PowerShell install support and fixed Windows Hermes skin paths.
+
+- Release notes: [CHANGELOG.md](CHANGELOG.md)
+- GitHub releases: <https://github.com/lipebez/hermes-matrix-skin/releases>
+
 ## Features
 
 - **Cinematic banner** — ASCII art HERMATRIX with iconic Matrix dialogue (`Wake up, Operator...`)
@@ -113,6 +120,7 @@ customize.ps1              # PowerShell personalizer
 - Technical skin name: `matrix`
 - Visual identity: `HERMATRIX`
 - Public wake-up line: `Wake up, Operator...`
+- Versioning: public releases use semantic version tags such as `v1.0.0`.
 
 ## License
 
