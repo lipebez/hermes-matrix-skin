@@ -6,21 +6,21 @@ Premium Matrix-inspired skin for Hermes Agent — deep black cyberpunk aesthetic
 
 ## Current version
 
-**v1.0.0** — first formal versioned release, with native Windows PowerShell install support and fixed Windows Hermes skin paths.
+**v1.1.0** — polished Matrix rain/banner release with aligned kana rails, cleaner HERMATRIX geometry, refined operator thinking messages, and safer cross-platform personalization.
 
 - Release notes: [CHANGELOG.md](CHANGELOG.md)
 - GitHub releases: <https://github.com/lipebez/hermes-matrix-skin/releases>
 
 ## Features
 
-- **Cinematic banner** — ASCII art HERMATRIX with iconic Matrix dialogue (`Wake up, Operator...`)
-- **Digital rain hero** — vertical katakana/number rain (`ﾊ ﾒ 0 ﾄ ｶ ﾂ ﾗ ﾅ`) with decorative accents throughout the banner
+- **Cinematic banner** — ASCII art HERMATRIX with a centered `Wake up, Operator...` greeting, aligned kana side rails, and full-width divider rules
+- **Digital rain hero** — katakana/number rain with kana edge rails, brighter low-end greens, framed `H E R M E S   M A T R I X`, and `operator signal locked` caption
 - **Binary spinner** — animated faces: `0`, `1`, `01`, `10`, `▓`, `▒`, `░`
-- **14 thinking verbs** — random Matrix-themed messages while the agent thinks:
-  `following the white rabbit` · `dodging bullets` · `consulting the oracle` · `jacking in` · `choosing the red pill` · `defying gravity` · `seeing through the code` · and more
+- **14 thinking verbs** — immersive operator/construct messages while the agent thinks:
+  `following the white rabbit` · `tracing the signal` · `syncing operator uplink` · `rewriting the construct` · `opening hidden exits` · `stabilizing residual self-image` · and more
 - **Custom prompt** — `ﾎ> ` with `⣿ OPERATOR` response label
-- **Deep green palette** — full gradient from `#001806` to `#D8FFE3` on pure black
-- **Personalize** — replace "Operator" with your name via one command
+- **Deep green palette** — readable Matrix-green gradient from `#003B12` to `#D8FFE3` on pure black
+- **Personalize** — replace "Operator" with your name via one command; the wake-up row is rebuilt to stay aligned for short and longer names
 
 ## Install
 
@@ -78,7 +78,7 @@ Or pass your name directly:
 & ([scriptblock]::Create((irm https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.ps1))) -Name "Neo"
 ```
 
-This updates the banner greeting (`Wake up, Neo...`) and the response label (`⣿ NEO`). A backup of the original file is created automatically.
+This updates the banner greeting (`Wake up, Neo...`) and the response label (`⣿ NEO`). The wake-up row is rebuilt to preserve the 78-column banner layout, and a backup of the original file is created automatically.
 
 ## Manual install
 
@@ -120,7 +120,7 @@ customize.ps1              # PowerShell personalizer
 - Technical skin name: `matrix`
 - Visual identity: `HERMATRIX`
 - Public wake-up line: `Wake up, Operator...`
-- Versioning: public releases use semantic version tags such as `v1.0.0`.
+- Versioning: public releases use semantic version tags such as `v1.1.0`.
 
 ## License
 

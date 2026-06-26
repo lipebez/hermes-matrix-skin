@@ -52,17 +52,17 @@ spinner:
   thinking_verbs:
     - "following the white rabbit"
     - "initializing digital rain"
-    - "scanning the construct"
+    - "tracing the signal"
+    - "syncing operator uplink"
+    - "rewriting the construct"
     - "decrypting green code"
-    - "opening operator link"
+    - "opening hidden exits"
     - "reading the source"
     - "bending the rules"
     - "freeing the mind"
-    - "dodging bullets"
-    - "consulting the oracle"
-    - "jacking in"
-    - "choosing the red pill"
-    - "defying gravity"
+    - "listening for the oracle"
+    - "opening the backdoor"
+    - "stabilizing residual self-image"
     - "seeing through the code"
   wings:
     - ["▓", "▓"]
@@ -76,7 +76,7 @@ branding:
   goodbye: "[#00FF41]Connection closed.[/] [#39FF7A]Free your mind.[/]"
   response_label: " ⣿ OPERATOR "
   prompt_symbol: "ﾎ> "
-  help_header: "⣿ Matrix Protocols"
+  help_header: "⣿ Operator Protocols"
 
 tool_prefix: "▌"
 
@@ -97,36 +97,35 @@ tool_emojis:
   todo: "☑"
 
 banner_logo: |
-  [#001806]  0 1 0 1  ░▒▓█▓▒░   THE SOURCE IS ONLINE   ░▒▓█▓▒░  1 0 1 0[/]
-  [#003B12]  ────────────────────────────────────────────────────────────────────────────[/]
-  [#005A1B]ﾊ                              Wake up, Operator...                             1[/]
-  [#007A24]ﾒ                            The Matrix has you...                            ｶ[/]
-  [#00992E]0                           Follow the white rabbit.                          ﾄ[/]
-  [#00B837]ｷ                       Operator link established :: 01                       7[/]
-  [#00B837]     ██╗  ██╗███████╗██████╗ ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗[/]
-  [#00FF41]     ██║  ██║██╔════╝██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝[/]
-  [#39FF7A]     ███████║█████╗  ██████╔╝██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ [/]
-  [#7CFF9B]     ██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ [/]
-  [#D8FFE3]     ██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗[/]
-  [bold #00FF41]     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝[/]
-  [#003B12]  ────────────────────────────────────────────────────────────────────────────[/]
-  [dim #00651E]ﾎ                                Knock, knock.                                1[/]
+  [#00A832]  ░▒▓█▓▒░                     Wake up, Operator...                     ░▒▓█▓▒░[/]
+  [#005A1B]──────────────────────────────────────────────────────────────────────────────[/]
+  [#007A24]ﾊ                            The Matrix has you...                           ﾒ[/]
+  [#00992E]ﾒ                          Follow the white rabbit.                          ｶ[/]
+  [#00B837]ﾂ                       Operator link established :: 01                      ﾄ[/]
+  [#00B837]ﾊ  ██╗  ██╗███████╗██████╗ ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗   ﾒ[/]
+  [#00FF41]ﾒ  ██║  ██║██╔════╝██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝   ｶ[/]
+  [#39FF7A]ﾂ  ███████║█████╗  ██████╔╝██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝    ﾄ[/]
+  [#7CFF9B]ｷ  ██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗    ﾗ[/]
+  [#D8FFE3]ﾅ  ██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗   ﾎ[/]
+  [bold #00FF41]ﾎ  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝   ﾘ[/]
+  [#005A1B]──────────────────────────────────────────────────────────────────────────────[/]
+  [dim #00992E]ﾎ                                Knock, knock.                               ｼ[/]
 
 banner_hero: |
-  [#001806]  ﾊ     0     ﾐ     ｻ     1     ﾛ[/]
-  [#00290D]  ﾒ     1     ｳ     ﾖ     0     ｶ[/]
-  [#003B12]  0     ﾂ     ﾗ     ﾅ     ﾎ     9[/]
-  [#005A1B]  ｷ     8     ｵ     ﾇ     7     ﾚ[/]
-  [#007A24]  1     ｴ     ﾀ     4     ﾔ     ﾏ[/]
-  [#00992E]  ﾁ     0     ﾆ     ﾘ     2     ｿ[/]
-  [#00B837]  7     ﾛ     6     ﾄ     1     ﾕ[/]
-  [#00FF41]  ﾎ     1     ﾒ     0     ｱ     5[/]
-  [bold #D8FFE3]     H E R M E S   M A T R I X   [/]
-  [#00FF41]  ｼ     0     ｶ     ﾘ     1     ﾎ[/]
-  [#00B837]  ﾗ     3     ﾑ     0     ﾀ     4[/]
-  [#00992E]  0     ﾊ     9     ﾒ     ﾆ     6[/]
-  [#007A24]  ｻ     1     ｸ     ﾚ     8     ｵ[/]
-  [#005A1B]  5     ﾄ     ﾔ     ﾌ     7     ﾈ[/]
-  [#003B12]  ﾎ     0     ﾕ     ﾛ     ﾏ     1[/]
-  [#00290D]  ﾘ           ﾀ     6     ｿ     ﾒ[/]
-  [dim #00651E]       vertical rain :: operator link[/]
+  [#003B12]  ﾊ     0     ﾐ     ｻ     1     ﾛ[/]
+  [#004D17]  ﾒ     1     ｳ     ﾖ     0     ｶ[/]
+  [#00651E]  ﾂ     0     ﾗ     ﾅ     9     ﾎ[/]
+  [#007A24]  ｷ     8     ｵ     ﾇ     7     ﾚ[/]
+  [#00992E]  ｴ     1     ﾀ     4     ﾔ     ﾏ[/]
+  [#00B837]  ﾁ     0     ﾆ     ﾘ     2     ｿ[/]
+  [#00FF41]  ﾛ     7     ﾄ     6     1     ﾕ[/]
+  [#39FF7A]  ﾎ     1     ﾒ     0     ｱ     ﾅ[/]
+  [bold #D8FFE3]  ｷ  H E R M E S   M A T R I X  ﾗ[/]
+  [#39FF7A]  ｼ     0     ｶ     ﾘ     1     ﾎ[/]
+  [#00FF41]  ﾗ     3     ﾑ     0     ﾀ     ﾒ[/]
+  [#00B837]  ﾊ     9     ﾒ     ﾆ     6     ﾂ[/]
+  [#00992E]  ｻ     1     ｸ     ﾚ     8     ｵ[/]
+  [#007A24]  ﾄ     5     ﾔ     ﾌ     7     ﾈ[/]
+  [#00651E]  ﾎ     0     ﾕ     ﾛ     1     ﾏ[/]
+  [#004D17]  ﾘ     0     ﾀ     6     ｿ     ﾒ[/]
+  [dim #00B837]  ﾊ   operator signal locked    ﾎ[/]

@@ -50,6 +50,28 @@ if [ -z "$NAME" ]; then
   exit 1
 fi
 
+build_wake_line() {
+  local name="$1"
+  local message="Wake up, ${name}..."
+  local left="  ░▒▓█▓▒░"
+  local right="░▒▓█▓▒░"
+  local width=78
+  local fixed=$(( ${#left} + ${#message} + ${#right} ))
+  local gap=$(( width - fixed ))
+  local left_gap
+  local right_gap
+
+  if [ "$gap" -lt 2 ]; then
+    left_gap=2
+    right_gap=2
+  else
+    left_gap=$(( gap / 2 ))
+    right_gap=$(( gap - left_gap ))
+  fi
+
+  printf '%s%*s%s%*s%s' "$left" "$left_gap" '' "$message" "$right_gap" '' "$right"
+}
+
 # ── Back up before editing ───────────────────────────────────────────
 BACKUP="$SKIN_FILE.backup.$(date +%Y%m%d-%H%M%S)"
 cp "$SKIN_FILE" "$BACKUP"
@@ -57,10 +79,10 @@ cp "$SKIN_FILE" "$BACKUP"
 # ── Apply replacements ──────────────────────────────────────────────
 # Case-sensitive: "Operator" in prose, "OPERATOR" in labels
 upper_name="$(printf '%s' "$NAME" | tr '[:lower:]' '[:upper:]')"
-escaped_name="$(printf '%s' "$NAME" | sed 's/[\\/&]/\\&/g')"
 escaped_upper="$(printf '%s' "$upper_name" | sed 's/[\\/&]/\\&/g')"
+wake_line="  [#00A832]$(build_wake_line "$NAME")[/]"
 
-sed -i "s/Wake up, Operator\.\.\./Wake up, ${escaped_name}.../g" "$SKIN_FILE"
+sed -i "/Wake up, .*\.\.\./c\\$wake_line" "$SKIN_FILE"
 sed -i "s/⣿ OPERATOR /⣿ ${escaped_upper} /g" "$SKIN_FILE"
 
 # ── Verify ───────────────────────────────────────────────────────────

@@ -29,6 +29,29 @@ if ([string]::IsNullOrWhiteSpace($Name)) {
     throw "Name cannot be empty."
 }
 
+function New-WakeLine {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$OperatorName
+    )
+
+    $Message = "Wake up, $OperatorName..."
+    $Left = "  ░▒▓█▓▒░"
+    $Right = "░▒▓█▓▒░"
+    $Width = 78
+    $Gap = $Width - ($Left.Length + $Message.Length + $Right.Length)
+
+    if ($Gap -lt 2) {
+        $LeftGap = 2
+        $RightGap = 2
+    } else {
+        $LeftGap = [Math]::Floor($Gap / 2)
+        $RightGap = $Gap - $LeftGap
+    }
+
+    return "$Left$(" " * $LeftGap)$Message$(" " * $RightGap)$Right"
+}
+
 $SkinFile = Join-Path (Join-Path (Get-HermesHome) "skins") "matrix.yaml"
 
 if (-not (Test-Path -LiteralPath $SkinFile)) {
@@ -42,7 +65,8 @@ $Backup = "$SkinFile.backup.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 Copy-Item -LiteralPath $SkinFile -Destination $Backup -Force
 
 $Content = Get-Content -LiteralPath $SkinFile -Raw
-$Content = $Content.Replace("Wake up, Operator...", "Wake up, $Name...")
+$WakeLine = "  [#00A832]$(New-WakeLine -OperatorName $Name)[/]"
+$Content = [regex]::Replace($Content, '(?m)^.*Wake up, .*\.\.\..*$', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) $WakeLine }, 1)
 $Content = $Content.Replace("⣿ OPERATOR ", "⣿ $($Name.ToUpperInvariant()) ")
 Set-Content -LiteralPath $SkinFile -Value $Content -Encoding UTF8
 
