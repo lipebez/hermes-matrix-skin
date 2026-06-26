@@ -1,7 +1,29 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SKIN_FILE="$HOME/.hermes/skins/matrix.yaml"
+resolve_hermes_home() {
+  if [ -n "${HERMES_HOME:-}" ]; then
+    printf '%s\n' "$HERMES_HOME"
+    return
+  fi
+
+  case "$(uname -s 2>/dev/null || printf unknown)" in
+    MINGW*|MSYS*|CYGWIN*)
+      if [ -n "${LOCALAPPDATA:-}" ]; then
+        if command -v cygpath >/dev/null 2>&1; then
+          printf '%s\n' "$(cygpath -u "$LOCALAPPDATA")/hermes"
+        else
+          printf '%s\n' "$LOCALAPPDATA/hermes"
+        fi
+        return
+      fi
+      ;;
+  esac
+
+  printf '%s\n' "$HOME/.hermes"
+}
+
+SKIN_FILE="$(resolve_hermes_home)/skins/matrix.yaml"
 
 # ── Check skin is installed ──────────────────────────────────────────
 if [ ! -f "$SKIN_FILE" ]; then
@@ -34,11 +56,15 @@ cp "$SKIN_FILE" "$BACKUP"
 
 # ── Apply replacements ──────────────────────────────────────────────
 # Case-sensitive: "Operator" in prose, "OPERATOR" in labels
-sed -i "s/Wake up, Operator\.\.\./Wake up, ${NAME}.../g" "$SKIN_FILE"
-sed -i "s/⣿ OPERATOR /⣿ ${NAME^^} /g" "$SKIN_FILE"
+upper_name="$(printf '%s' "$NAME" | tr '[:lower:]' '[:upper:]')"
+escaped_name="$(printf '%s' "$NAME" | sed 's/[\\/&]/\\&/g')"
+escaped_upper="$(printf '%s' "$upper_name" | sed 's/[\\/&]/\\&/g')"
+
+sed -i "s/Wake up, Operator\.\.\./Wake up, ${escaped_name}.../g" "$SKIN_FILE"
+sed -i "s/⣿ OPERATOR /⣿ ${escaped_upper} /g" "$SKIN_FILE"
 
 # ── Verify ───────────────────────────────────────────────────────────
-if grep -q "$NAME" "$SKIN_FILE"; then
+if grep -Fq "$NAME" "$SKIN_FILE"; then
   echo ""
   echo "  ✔ Operator replaced with: $NAME"
   echo "  ✔ Backup saved to: $BACKUP"

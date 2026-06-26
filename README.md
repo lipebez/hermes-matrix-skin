@@ -17,10 +17,18 @@ Premium Matrix-inspired skin for Hermes Agent — deep black cyberpunk aesthetic
 
 ## Install
 
-Run:
+### macOS / Linux / WSL / Git Bash
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/install.sh | bash
+```
+
+### Windows PowerShell
+
+Use the PowerShell installer instead of `curl ... | bash`:
+
+```powershell
+irm https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/install.ps1 | iex
 ```
 
 Then open Hermes and use:
@@ -29,9 +37,17 @@ Then open Hermes and use:
 /skin matrix
 ```
 
+## Why PowerShell has a separate command
+
+On Windows, Hermes stores user data in `%LOCALAPPDATA%\hermes` by default. The Bash installer also supports Git Bash/MSYS/Cygwin, but PowerShell users should use `install.ps1` so the skin lands in the same Hermes home that the local Windows Hermes app reads.
+
+If you use a custom Hermes home, set `HERMES_HOME` before installing.
+
 ## Personalize
 
-Replace **"Operator"** with your name or nickname:
+Replace **"Operator"** with your name or nickname.
+
+### macOS / Linux / WSL / Git Bash
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.sh | bash
@@ -43,14 +59,36 @@ Or pass your name directly:
 curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.sh | bash -s "Neo"
 ```
 
+### Windows PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.ps1 | iex
+```
+
+Or pass your name directly:
+
+```powershell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/customize.ps1))) -Name "Neo"
+```
+
 This updates the banner greeting (`Wake up, Neo...`) and the response label (`⣿ NEO`). A backup of the original file is created automatically.
 
 ## Manual install
+
+### macOS / Linux / WSL
 
 ```bash
 mkdir -p ~/.hermes/skins
 curl -fsSL https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/skins/matrix.yaml \
   -o ~/.hermes/skins/matrix.yaml
+```
+
+### Windows PowerShell
+
+```powershell
+New-Item -ItemType Directory -Force "$env:LOCALAPPDATA\hermes\skins"
+irm https://raw.githubusercontent.com/lipebez/hermes-matrix-skin/main/skins/matrix.yaml `
+  -OutFile "$env:LOCALAPPDATA\hermes\skins\matrix.yaml"
 ```
 
 Then use:
@@ -64,8 +102,10 @@ Then use:
 ```text
 skins/matrix.yaml          # HERMATRIX theme
 screenshots/matrix.png     # Preview image
-install.sh                 # One-command installer
-customize.sh               # Replace "Operator" with your name
+install.sh                 # Bash installer
+install.ps1                # PowerShell installer
+customize.sh               # Bash personalizer
+customize.ps1              # PowerShell personalizer
 ```
 
 ## Notes
